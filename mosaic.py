@@ -7,11 +7,19 @@ cap = cv2.VideoCapture(0) # 노트북 웹캠을 카메라로 사용
 cap.set(3, 460)
 cap.set(4, 480)
 while(True):
+<<<<<<< HEAD
     ret, frame = cap.read()
     frame = cv2.flip(frame, 1) # 좌우 대칭
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     faces = face_cascade.detectMultiScale(gray,1.05,5)
+
+    ret, frame = cap.read()
+    frame = cv2.flip(frame, 1) # 좌우 대칭
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    faces = face_cascade.detectMultiScale(gray,1.05,5)
+
     print("Number of faces detected: " + str(len(faces)))
 
     if len(faces):
